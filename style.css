@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    transition: all 0.5s ease;
+}
+
+
+.titulo{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: #c7bfbf;
+    font-size: 1rem;
+    padding: 20px 0;
+}
+
+header {
+    width: 100%;
+}
+
+header nav{
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    background-color: #343434;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    transition: all 0.5s ease;
+}
+
+header nav a{
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    padding: 14px 0;
+    z-index: 1;
+    width: 100%;
+    font-size: 1.3rem;
+    font-weight: 600;
+    border: 2px solid #000;
+    border-top-width: 0;
+    border-bottom-width: 4px;
+    transition: all 0.5s ease;
+}
+
+header nav::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 33.5%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(90deg, #002147 0 calc(33.2vw - 4px), #004225 0 calc(66.5vw - 8px), #58111A 0 100vw);
+    animation: scroll-progress linear;
+    animation-timeline: scroll(root);
+}
+
+@keyframes scroll-progress {
+    100% {
+        width: 100%;
+    }
+}
+
+header nav a:nth-child(1):hover{
+    background-color: #073366;
+}
+
+header nav a:nth-child(2):hover{
+    background-color: #08623b;
+}
+
+header nav a:nth-child(3):hover{
+    background-color: #731925;
+}
+
+div.seccion{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content:left;
+    align-items: flex-start;
+    padding-left: 120px;
+    padding-top: 180px;
+    color: #fff;
+    border-bottom: 3px solid #000;
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+div.seccion .descripcion{
+    display: block;
+    padding-right: 72%;
+    padding-top: 20px;
+    font-weight: 300;
+    font-size: 1.1rem;
+}
+
+
+div.seccion p{
+    font-size: 1.25rem;
+}
+
+div#html{
+    background-color: #002147;
+    transition: background-color 0.5s;
+}
+
+div#css{
+    background-color: #004225;
+    transition: background-color 0.5s;
+}
+
+div#js{
+    background-color: #58111A;
+    transition: background-color 0.5s;
+}
+
+.boxicon{
+    position: fixed;
+    top: calc(50vh - 15px);
+    right: 20px;
+    width: 30px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.boxicon i{
+    font-size: 3rem;
+    color: #fff;
+}
+
+.boxicon::after{
+    content: "Scroll";
+    position: absolute;
+    right: 2.5rem;
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: bold;
+    bottom: 0.6rem;
+}
+
+@media screen and (max-width: 380px) {
+    header nav a {
+        font-size: 1.2rem;
+    }
+
+    .boxicon::after {
+        content: "";
+    }
+}
+
+.modo-nocturno {
+    position: fixed;
+    top: 50%;
+    left: 10px;
+    transform: translate(0, -50%);
+    cursor: pointer;
+    z-index: 2;
+}
+
+.modo-nocturno i {
+    font-size: 2rem;
+    color: #000000;
+    transition: color 0.5s ease;
+}
+
+
+body.nocturno .modo-nocturno i {
+    color: #ffffff; 
+}
+
+
+body.nocturno #html {
+    background-color: #111111; 
+    border-bottom: 3px solid #ffffff;
+    transition: background-color 0.5s;
+}
+
+body.nocturno #css {
+    background-color: #111111; 
+    border-bottom: 3px solid #ffffff;
+    transition: background-color 0.5s;
+}
+
+body.nocturno #js {
+    background-color: #111111; 
+    border-bottom: 3px solid #ffffff;
+    transition: background-color 0.5s;
+}
+
+body.nocturno header nav a{
+    border: 2px solid #ffffff;
+    border-top-width: 0;
+    border-bottom-width: 4px;
+    transition: all 0.5s ease;
+}
+
+body.nocturno header nav::after{
+    
+    background: linear-gradient(90deg, #111111 0 calc(33.2vw - 4px), #111111 0 calc(66.5vw - 8px), #111111 0 100vw);
+    animation: scroll-progress linear;
+    animation-timeline: scroll(root);
+}
+
+body.nocturno header nav a:nth-child(1):hover{
+    background-color: #212121;
+}
+
+body.nocturno header nav a:nth-child(2):hover{
+    background-color: #212121;
+}
+
+body.nocturno header nav a:nth-child(3):hover{
+    background-color: #212121;
+}

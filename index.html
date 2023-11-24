@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>Proyecto Básico | Diseño Web</title>
+</head>
+
+<body >
+    <div class="titulo">Proyecto básico con Progress Bar</div>
+    <header>
+        <nav>
+            <a href="#html">Html</a>
+            <a href="#css">CSS</a>
+            <a href="#js">JS</a>
+        </nav>
+    </header>
+    <div class="cursor"></div>
+
+    <div class="boxicon">
+        <i class='bx bx-chevron-up'></i>
+        <i class='bx bx-dots-vertical-rounded'></i>
+        <i class='bx bx-mouse'></i>
+        <i class='bx bx-dots-vertical-rounded'></i>
+        <i class='bx bx-chevron-down'></i>
+    </div>
+
+    <div class="seccion" id="html">
+        <h2>HTML</h2>
+        <p>HyperText Markup Language</p>
+        <p class="descripcion">Es el lenguaje de marcado utilizado para la creación y estructuración de
+        contenido en páginas web. Define la jerarquía y organización de elementos como
+        encabezados, párrafos, enlaces, imágenes y otros, utilizando etiquetas.</p>
+    </div>
+
+    <div class="seccion" id="css">
+        <h2>CSS</h2>
+        <p>Cascading Style Sheets</p>
+        <p class="descripcion">Es un lenguaje de estilo utilizado para describir la presentación y
+        el formato de un documento HTML. CSS permite controlar aspectos como colores, fuentes, márgenes,
+        alineaciones y diseño, separando así el contenido estructural del diseño visual.</p>
+    </div>
+
+    <div class="seccion" id="js">
+        <h2>JS</h2>
+        <p>Client-Side Scripting Language</p>
+        <p class="descripcion"> Es un lenguaje de programación que se utiliza para agregar interactividad y
+            dinamismo a las páginas web. Permite manipular el contenido de la página, interactuar con el
+            usuario, realizar peticiones al servidor y actualizar la interfaz de usuario en tiempo real. </p>
+    </div>
+
+    <div class="modo-nocturno" onclick="toggleModoNocturno()">
+        <i class='bx bx-moon'></i>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
